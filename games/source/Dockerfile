@@ -22,8 +22,8 @@ ENV         LANG en_US.utf8
 
 # install deps, create our container user, and be done with it
 RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0;     \
+            add-apt-repository ppa:ubuntu-toolchain-r/test;                 \
             dpkg --add-architecture i386                                    \
-            && add-apt-repository ppa:ubuntu-toolchain-r/test               \
             && apt-get update                                               \
             && apt-get install -y --no-install-recommends                   \
             # needed for ip route stuff in entrypoint.sh
