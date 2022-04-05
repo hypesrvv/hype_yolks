@@ -29,7 +29,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0;     \
             net-tools iproute2                                              \
             # TF2 Wiki says these are required
             lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1              \
-            lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386 libstdc++6     \
+            lib32stdc++6 libtinfo5:i386 libcurl3-gnutls:i386 lib32stdc++6   \
             # needed for sdl threading
             libsdl2-2.0-0:i386                                              \
             # needed for some sourcemod extensions
