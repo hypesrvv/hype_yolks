@@ -22,7 +22,6 @@ ENV         LANG en_US.utf8
 
 # install deps, create our container user, and be done with it
 RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0;     \
-            add-apt-repository ppa:ubuntu-toolchain-r/test -y;              \
             dpkg --add-architecture i386                                    \
             && apt-get update                                               \
             && apt-get install -y --no-install-recommends                   \
@@ -30,7 +29,7 @@ RUN         tput setaf 2; echo "Installing dependencies..."; tput sgr0;     \
             net-tools iproute2                                              \
             # TF2 Wiki says these are required
             lib32z1 libncurses5:i386 libbz2-1.0:i386 lib32gcc1              \
-            lib32stdc++6-7-dbg libtinfo5:i386 libcurl3-gnutls:i386          \
+            lib32stdc++-7-dev libtinfo5:i386 libcurl3-gnutls:i386                \
             # needed for sdl threading
             libsdl2-2.0-0:i386                                              \
             # needed for some sourcemod extensions
